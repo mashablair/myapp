@@ -8,7 +8,8 @@ https://www.youtube.com/watch?v=Hej48pi_lOc&list=RDCMUC6aTLuI_j4-0wiDSzmaPctQ&st
 Article: 
 https://www.sammeechward.com/connect-to-mysql-from-node 
 
-
+## DB
+This app uses MySQL DB that you have to set up on your own. I use MySQL Server on my local machine, but you can use a hosted or managed MySQL db somewhere else.  
 
 
 ## helper libraries
@@ -26,3 +27,6 @@ This plugin refreshes the dev server automatically
 - download or clone this repo
 - run npm install 
 - run npm run dev (this will start the dev server which refreshes with nodemon)
+
+## to submit a form to DB
+Go to http://localhost:8080/create-new-note and submit a form.  
