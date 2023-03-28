@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "database.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon --ext js --watch . app-test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,5 +15,8 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "mysql2": "^3.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }

@@ -1,22 +1,9 @@
-import mysql from "mysql2";
-
-import dotenv from "dotenv";
-dotenv.config();
-
-// By creating a pool, we can reuse connections to the database instead of always opening and closing connections.
-// This will improve performance once your app is hosted and you have a lot of users.
-const pool = mysql
-  .createPool({
-    host: process.env.MYSQL_HOST,
-    user: process.env.MYSQL_USER,
-    password: process.env.MYSQL_PASSWORD,
-    database: process.env.MYSQL_DATABASE,
-  })
-  .promise();
+import pool from "./db-connection.js";
 
 export async function getAllnotes() {
   // this is destructuring, so it gets 1st item from the array which contains our data (2nd item is metadata)
   const [rows] = await pool.query("select * from notes");
+  console.log(rows);
   return rows;
 }
 
@@ -51,6 +38,7 @@ export async function createNote(title, content) {
   return getNote(id);
 }
 
+// TESTING:
 // const notes = await getAllnotes();
 // console.log(notes);
 
