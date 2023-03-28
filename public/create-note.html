@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create new note</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Create a Note</h1>
+      <form id="noteForm">
+        <div class="field">
+          <label class="label" for="title">Title:</label>
+          <div class="control">
+            <input class="input" type="text" id="title" name="title" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="contents">Contents:</label>
+          <div class="control">
+            <textarea class="textarea" id="contents" name="contents" required></textarea>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <button class="button is-primary" type="submit">Create Note</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
