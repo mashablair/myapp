@@ -1,4 +1,4 @@
-// this app.js file is created with chat-gpt.4 help
+// this app.js file is created on my own
 // they listen on different ports so there is no conflict
 
 import express, { json } from "express";

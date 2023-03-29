@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="noteApp">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create Note</title>
+  <title>Create new note</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
 
 <body>
-  <section class="section" ng-controller="noteController as vm">
+  <section class="section">
     <div class="container">
       <h1 class="title">Create a Note</h1>
-      <form ng-submit="vm.submitForm()">
+      <form id="noteForm">
         <div class="field">
           <label class="label" for="title">Title:</label>
           <div class="control">
-            <input class="input" type="text" id="title" ng-model="vm.title" required>
+            <input class="input" type="text" id="title" name="title" required>
           </div>
         </div>
         <div class="field">
           <label class="label" for="contents">Contents:</label>
           <div class="control">
-            <textarea class="textarea" id="contents" ng-model="vm.contents" required></textarea>
+            <textarea class="textarea" id="contents" name="contents" required></textarea>
           </div>
         </div>
         <div class="field">
@@ -35,7 +34,8 @@
       </form>
     </div>
   </section>
-  <script src="angularApp.js"></script>
+
+  <script src="scripts-vanilla.js"></script>
 </body>
 
 </html>
